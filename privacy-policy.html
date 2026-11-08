@@ -43,7 +43,7 @@
 <header>
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p>Knowdrop &middot; Android app &middot; Last updated: 7 November 2026</p>
+    <p>Knowdrop &middot; Android app &middot; Last updated: 8 November 2026</p>
   </div>
 </header>
 <main>
@@ -51,8 +51,9 @@
 <div class="card">
   <strong>In short.</strong> You can play without an account. Your games, streaks, stats and settings are
   stored on your phone. We do not sell your data. Ads are shown by Google AdMob; in the EU and UK you
-  choose whether ads may be personalised. Purchases go through Google Play. Some online features
-  (leaderboards, live rooms) only send data to us when they are switched on in the app.
+  choose whether ads may be personalised. Purchases go through Google Play. Online features
+  (friends, leaderboards, live parties, push notifications) only send data to us when you use them; you can
+  delete your online account in the app at any time.
 </div>
 
 <h2>1. Who we are</h2>
@@ -93,21 +94,32 @@ what you bought (Plus, Remove ads forever, coins), we use RevenueCat. RevenueCat
 purchase history (product, date, price, store transaction ID) and a random app user ID. It does not
 receive your name or email from us.</p>
 
-<h3>2.4 Online features (when switched on)</h3>
-<p>Some features need our servers. They are built into the app but only work when we switch them on.
-When they are on:</p>
+<h3>2.4 Online features (only when you use them)</h3>
+<p>You can play everything offline without an account. These features use our server on Microsoft Azure
+(West Europe) only when you use them:</p>
 <ul>
-  <li><strong>Guest account:</strong> the app creates an anonymous guest account (a random ID) at
-    Supabase, our database provider. No email or password is needed.</li>
-  <li><strong>Ranked play and leaderboards:</strong> your guest ID, nickname, answers, scores and
-    streaks are stored so the server can score fairly and show leaderboards. Your nickname is visible
-    to other players.</li>
-  <li><strong>Reports and suggestions:</strong> when you report a question or suggest a topic or a
-    question, we receive the text you wrote and the question involved, linked to your guest ID so we
-    can tell you when a report is fixed. Please do not include personal details in this text.</li>
-  <li><strong>Live Friends Rooms:</strong> your nickname, room code and answers (with timing) are sent
-    to our match server on Microsoft Azure. Like any internet server, it sees your IP address to keep
-    the connection. Match results are stored at Supabase.</li>
+  <li><strong>Online account (friends, game invites, leaderboards):</strong> created only when you tap
+    <em>Go online</em>. We store your nickname, avatar emoji, a random player ID, a friend code, your friends
+    and friend requests, your <em>who can invite me</em> and notification settings, and a secret sign-in token
+    (we keep only a scrambled hash of it). No email address or password is needed.</li>
+  <li><strong>Sign in with Google (optional):</strong> lets you keep your friends and scores on a new phone.
+    We receive a one-time Google sign-in token, check it, and keep only a scrambled (hashed) version of your
+    Google account ID. We never receive or store your email address, name or photo from Google.</li>
+  <li><strong>Leaderboards:</strong> your Daily Drop answers (which option, how fast) are stored on your
+    phone first and sent when you are online, so the server can calculate your score itself. We keep your
+    daily score and the time you played. Your nickname, avatar and score are visible to other players on the
+    daily and weekly leaderboards (global, and to your friends).</li>
+  <li><strong>Game invites:</strong> when you invite a friend, we pass your nickname and the room code (and
+    its PIN for a password room) to them. Invites are kept in memory for at most 15 minutes. Who may invite
+    you is your choice: everyone with your code, friends only, selected friends, or nobody.</li>
+  <li><strong>Push notifications (optional):</strong> if you turn on a notification type, your phone gets
+    a push token from Google Firebase Cloud Messaging and we store it to send game invites, friend requests
+    or "a friend beat your score" messages. Turning all of them off deletes the token.</li>
+  <li><strong>Live parties:</strong> your nickname, room code and answers (with timing) are sent to our
+    match server and kept in memory only for the match. Like any internet server it sees your IP address to
+    keep the connection; we do not store IP addresses or keep connection logs.</li>
+  <li><strong>Reports and suggestions:</strong> when you report a question or suggest a topic, we receive
+    the text you wrote and the question involved. Please do not include personal details in this text.</li>
 </ul>
 
 <h3>2.5 Challenge codes and share cards</h3>
@@ -143,9 +155,10 @@ are only used as anonymous topic ideas, without your ID or nickname.</p>
   <tr><td>Google Ireland Ltd (AdMob, UMP consent)</td><td>Ads and consent; independent controller for personalised ads</td><td>Advertising ID, IP address, ad interactions, device data</td><td>EU / USA</td></tr>
   <tr><td>Google Ireland Ltd (Google Play)</td><td>Payments; independent controller</td><td>Payment and order data</td><td>EU / USA</td></tr>
   <tr><td>RevenueCat, Inc.</td><td>Processor: purchase management</td><td>Purchase history, random app user ID</td><td>USA</td></tr>
-  <tr><td>Supabase, Inc.</td><td>Processor: database and guest accounts (when switched on)</td><td>Guest ID, nickname, scores, reports, suggestions</td><td>EU</td></tr>
-  <tr><td>Microsoft Ireland Operations Ltd (Azure)</td><td>Processor: live match server (when switched on)</td><td>Nickname, room code, answers, IP address</td><td>EU (West Europe)</td></tr>
-  <tr><td>Microsoft Ireland Operations Ltd (Azure Static Web Apps)</td><td>Processor: hosting of question and picture updates</td><td>IP address and device type in standard web server logs. The app sends no other data when it checks for new questions.</td><td>EU / worldwide edge network</td></tr>
+  <tr><td>Microsoft Ireland Operations Ltd (Azure)</td><td>Processor: match server and online accounts (Azure Container Apps, Azure Table Storage)</td><td>Nickname, avatar, player ID, friend code, friends, settings, hashed tokens, Daily Drop answers and scores, push token, room code; IP address while connected (not stored)</td><td>EU (West Europe)</td></tr>
+  <tr><td>Google Ireland Ltd (Firebase Cloud Messaging)</td><td>Processor: delivering push notifications you turned on</td><td>Push token, notification text (for example a friend's nickname and room code)</td><td>EU / USA</td></tr>
+  <tr><td>Google Ireland Ltd (Sign in with Google)</td><td>Optional sign-in to keep your account on a new phone</td><td>Sign-in token; we keep only a hash of your Google account ID</td><td>EU / USA</td></tr>
+  <tr><td>GitHub, Inc. (GitHub Pages)</td><td>Processor: hosting of question and picture updates</td><td>IP address and device type in standard web server logs. The app sends no other data when it checks for new questions.</td><td>USA / worldwide edge network</td></tr>
   <tr><td>Anthropic, PBC</td><td>AI provider for writing and checking questions</td><td>Topics and question text only. No personal data.</td><td>USA</td></tr>
 </table>
 </div>
@@ -160,10 +173,11 @@ the provider is certified, and otherwise by the European Commission's Standard C
 <table>
   <tr><th>Data</th><th>Kept for</th></tr>
   <tr><td>Data on your phone</td><td>Until you use <em>Settings &gt; Delete my data</em> or uninstall the app</td></tr>
-  <tr><td>Guest account, scores, streaks (online)</td><td>Until you delete your account in Settings, or after 24 months without activity</td></tr>
-  <tr><td>Leaderboard entries</td><td>Daily and weekly boards are archived; after account deletion your entries are anonymised</td></tr>
+  <tr><td>Online account, friends, settings and Daily Drop scores</td><td>Until you delete your online account (<em>Profile &gt; Online account &gt; Delete online account</em>); everything is then deleted immediately, including your leaderboard entries. You can also ask by email: see <a href="https://knowdrop-play.kalmarium.com/delete-account">knowdrop-play.kalmarium.com/delete-account</a></td></tr>
+  <tr><td>Game invites</td><td>Max 15 minutes, in memory only</td></tr>
+  <tr><td>Push token</td><td>Until you turn off all push notifications or delete your online account</td></tr>
   <tr><td>Reports and suggestions</td><td>Until handled, then max 12 months; accepted topics are kept without any link to you</td></tr>
-  <tr><td>Match server connection logs (IP address)</td><td>Max 30 days</td></tr>
+  <tr><td>Live party data</td><td>In memory only, deleted when the room closes; no IP addresses are stored</td></tr>
   <tr><td>Purchase records</td><td>As long as needed to restore purchases, and 7 years for Dutch tax law</td></tr>
   <tr><td>Ad data at Google</td><td>According to Google's own retention rules</td></tr>
 </table>
