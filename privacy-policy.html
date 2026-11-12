@@ -43,16 +43,17 @@
 <header>
   <div class="wrap">
     <h1>Privacy Policy</h1>
-    <p>Knowdrop &middot; Android app &middot; Last updated: 11 November 2026</p>
+    <p>Knowdrop &middot; Android app &middot; Last updated: 12 November 2026</p>
   </div>
 </header>
 <main>
 
 <div class="card">
-  <strong>In short.</strong> You can play without an account. Your games, streaks, stats and settings are
-  stored on your phone. We do not sell your data. Ads are shown by Google AdMob; in the EU and UK you
+  <strong>In short.</strong> When you give a nickname and avatar, the app creates a simple online account for you
+  automatically (no email, no password). Your games and settings stay on your phone; your nickname, avatar,
+  stats summary and Daily Drop scores are also stored on our server so friends and leaderboards work. We do not sell your data. Ads are shown by Google AdMob; in the EU and UK you
   choose whether ads may be personalised. Purchases go through Google Play. Online features
-  (friends, leaderboards, live parties, push notifications) only send data to us when you use them; you can
+  (friends, leaderboards, topic suggestions, live parties, push notifications) use that account; you can
   delete your online account in the app at any time.
 </div>
 
@@ -94,12 +95,13 @@ what you bought (for example Remove ads forever), the app asks Google Play which
 account owns. We do not receive your name, email or purchase history, and no third-party purchase
 service is used. Purchases can be restored on any device with the same Google account.</p>
 
-<h3>2.4 Online features (only when you use them)</h3>
-<p>You can play everything offline without an account. These features use our server on Microsoft Azure
-(West Europe) only when you use them:</p>
+<h3>2.4 Online account and online features</h3>
+<p>You can play everything offline. When you enter a nickname and pick an avatar, the app creates your
+online account automatically; if you delete the account in the app, it is not created again unless you
+choose <em>Go online</em>. These features use our server on Microsoft Azure (West Europe):</p>
 <ul>
-  <li><strong>Online account (friends, game invites, leaderboards):</strong> created only when you tap
-    <em>Go online</em>. We store your nickname, avatar emoji, a random player ID, a friend code, your friends
+  <li><strong>Online account (friends, game invites, leaderboards):</strong> created automatically when you set your nickname and avatar (or by tapping
+    <em>Go online</em>). We store your nickname, avatar emoji, a random player ID, a friend code, your friends
     and friend requests, your <em>who can invite me</em> and notification settings, and a secret sign-in token
     (we keep only a scrambled hash of it). No email address or password is needed.</li>
   <li><strong>Sign in with Google (optional):</strong> lets you keep your friends and scores on a new phone.
@@ -111,15 +113,21 @@ service is used. Purchases can be restored on any device with the same Google ac
     daily and weekly leaderboards (global, and to your friends).</li>
   <li><strong>Game invites:</strong> when you invite a friend, we pass your nickname and the room code (and
     its PIN for a password room) to them. Invites are kept in memory for at most 15 minutes. Who may invite
-    you is your choice: everyone with your code, friends only, selected friends, or nobody.</li>
+    you is your choice: everyone with your code, friends only, selected friends, nobody, or
+    <em>anybody and list me for open games</em>. Only if you choose the last option, your nickname and avatar can
+    be shown to hosts of open online games, who may then invite you.</li>
+  <li><strong>Stats summary:</strong> your per-category answer totals, games played, streak and Daily Drop
+    history are synced to your account so they come back on a new phone and can be ranked on the
+    category leaderboards (nickname and avatar, totals only).</li>
   <li><strong>Push notifications (optional):</strong> if you turn on a notification type, your phone gets
     a push token from Google Firebase Cloud Messaging and we store it to send game invites, friend requests
     or "a friend beat your score" messages. Turning all of them off deletes the token.</li>
   <li><strong>Live parties:</strong> your nickname, room code and answers (with timing) are sent to our
     match server and kept in memory only for the match. Like any internet server it sees your IP address to
     keep the connection; we do not store IP addresses or keep connection logs.</li>
-  <li><strong>Reports and suggestions:</strong> when you report a question or suggest a topic, we receive
-    the text you wrote and the question involved. Please do not include personal details in this text.</li>
+  <li><strong>Reports and suggestions:</strong> when you report a question, suggest a topic, vote for a topic or suggest a
+    question, we receive the text you wrote and the question involved. Topic suggestions and votes are
+    shown to other players without your name. Please do not include personal details in this text.</li>
 </ul>
 
 <h3>2.5 Challenge codes and share cards</h3>
