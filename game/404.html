@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Knowdrop</title>
+    <script>
+      // A deep link such as /game/join/ABCD (or a mistyped path) lands on the hash route of the app.
+      (function () {
+        var path = location.pathname.replace(/^\/game\/?/, '').replace(/\/+$/, '');
+        var hash = path ? '#/' + path : '#/';
+        location.replace('/game/' + location.search + hash);
+      })();
+    </script>
+  </head>
+  <body>
+    <p>Redirecting to <a href="/game/">Knowdrop</a>…</p>
+  </body>
+</html>
