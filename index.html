@@ -1,1 +1,199 @@
-<!doctype html><html lang="en"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Knowdrop: Daily Trivia Quiz</title><body style="font-family:sans-serif;max-width:640px;margin:40px auto;padding:0 16px"><h1>Knowdrop</h1><p>Daily trivia for Android by Kalmarium Services BV. A fresh Daily Drop every day, thousands of fact-checked questions, and battles with friends. No energy, no timers.</p><ul><li><a href="https://play.google.com/store/apps/details?id=com.kalmarium.quizdrop">Get Knowdrop on Google Play</a></li><li><a href="privacy-policy.html">Privacy policy</a></li><li><a href="terms.html">Terms of use</a></li></ul><p>Contact: <a href="mailto:kalmariumservices@gmail.com">kalmariumservices@gmail.com</a></p></body></html>
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Knowdrop: Daily Trivia Quiz and Friend Battles</title>
+<meta name="description" content="Knowdrop is a free daily trivia quiz for Android: a fresh Daily Drop of 10 fact-checked questions, picture rounds and battles with friends. Works offline.">
+<link rel="canonical" href="https://knowdrop.kalmarium.com/">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="theme-color" content="#14532d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Knowdrop">
+<meta property="og:title" content="Knowdrop: Daily Trivia Quiz and Friend Battles">
+<meta property="og:description" content="Knowdrop is a free daily trivia quiz for Android: a fresh Daily Drop of 10 fact-checked questions, picture rounds and battles with friends. Works offline.">
+<meta property="og:url" content="https://knowdrop.kalmarium.com/">
+<meta property="og:image" content="https://knowdrop.kalmarium.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Knowdrop, fresh trivia every day, with the water drop mascot">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Knowdrop: Daily Trivia Quiz and Friend Battles">
+<meta name="twitter:description" content="Knowdrop is a free daily trivia quiz for Android: a fresh Daily Drop of 10 fact-checked questions, picture rounds and battles with friends. Works offline.">
+<meta name="twitter:image" content="https://knowdrop.kalmarium.com/img/og.jpg">
+<style>
+  :root { --bg:#f6faf7; --text:#12201a; --muted:#4b5d53; --card:#ffffff; --line:#d7e5dc; --brand:#14532d; --brand-2:#15803d; --link:#1d4ed8; --accent:#facc15; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0b0f0d; --text:#e8efea; --muted:#a3b8ab; --card:#121a16; --line:#22322a; --brand:#22c55e; --brand-2:#16a34a; --link:#60a5fa; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 16px; }
+  header { background:linear-gradient(120deg,#14532d,#0e7490); color:#fff; padding:28px 0 32px; }
+  .brand { display:flex; align-items:center; gap:14px; }
+  .brand img { border-radius:20px; flex:none; }
+  header h1 { margin:0; font-size:1.55rem; line-height:1.2; }
+  header .lead { color:#d1fae5; margin:16px 0 20px; font-size:1.05rem; }
+  .play { display:inline-block; line-height:0; border-radius:8px; }
+  .play:focus-visible, a:focus-visible, .shots:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+  .note { font-size:.9rem; margin:10px 0 0; color:#d1fae5; }
+  h2 { color:var(--brand); font-size:1.3rem; margin:36px 0 10px; padding-bottom:4px; border-bottom:3px solid var(--accent); display:inline-block; }
+  h3 { font-size:1.05rem; margin:0 0 4px; }
+  a { color:var(--link); }
+  .shots { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 16px 12px; margin:12px -16px 0; }
+  .shots img { scroll-snap-align:start; flex:none; width:200px; height:auto; border-radius:14px; border:1px solid var(--line); }
+  .grid { display:grid; gap:12px; grid-template-columns:1fr; }
+  .card { background:var(--card); border:1px solid var(--line); border-left:5px solid var(--brand-2); border-radius:12px; padding:12px 16px; }
+  .card p { margin:0; }
+  details { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 16px; margin:10px 0; }
+  summary { cursor:pointer; font-weight:600; }
+  details p { margin:8px 0 2px; }
+  .more ul { padding-left:20px; }
+  footer { border-top:1px solid var(--line); margin-top:36px; padding:20px 0 36px; color:var(--muted); font-size:.92rem; }
+  @media (min-width:640px) { .grid { grid-template-columns:1fr 1fr; } header h1 { font-size:2rem; } .shots img { width:220px; } }
+</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MobileApplication",
+  "name": "Knowdrop",
+  "alternateName": "Knowdrop: Daily Trivia Quiz",
+  "description": "Daily trivia quiz for Android with a fresh Daily Drop of 10 fact-checked questions, picture rounds, themed packs and battles with friends. Works offline.",
+  "operatingSystem": "Android",
+  "applicationCategory": "GameApplication",
+  "genre": "Trivia",
+  "inLanguage": "en",
+  "url": "https://knowdrop.kalmarium.com/",
+  "installUrl": "https://play.google.com/store/apps/details?id=com.kalmarium.quizdrop&referrer=utm_source%3Dwebsite%26utm_medium%3Dhero",
+  "downloadUrl": "https://play.google.com/store/apps/details?id=com.kalmarium.quizdrop&referrer=utm_source%3Dwebsite%26utm_medium%3Dhero",
+  "image": "https://knowdrop.kalmarium.com/img/og.jpg",
+  "screenshot": [
+    "https://knowdrop.kalmarium.com/img/daily-drop.webp",
+    "https://knowdrop.kalmarium.com/img/picture-reveal.webp",
+    "https://knowdrop.kalmarium.com/img/party.webp"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "availability": "https://schema.org/InStock"
+  },
+  "author": {
+    "@type": "Organization",
+    "name": "Kalmarium Services BV",
+    "url": "https://kalmarium.com"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is Knowdrop free?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes, Knowdrop is free to play. There are no lives, no energy and no waiting timers. Free players see a small banner ad on menu and result screens, never during a question or a match and not in the first 3 days. Optional purchases (Remove ads forever, or the Plus subscription) turn ads off."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I play without an internet connection?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. The whole game works offline, so you can play on a plane or a train. Online features such as friends, leaderboards and live parties need a connection."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need an account?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No account is needed to play. If you pick a nickname and an avatar, the app creates a simple online account for friends and leaderboards, without an email address or a password. You can delete it in the app at any time."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How are the questions made and checked?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Questions are written with the help of AI and then checked by a separate, independent fact-check against reliable sources. After each answer you see a fun fact and a source link. If you spot a mistake, tap Report on the question and we will look at it."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I play with friends on their own phones?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Host an online game and friends join from their own phones with a room code, a QR code, a PIN or an open game. You can also play pass and play with 2 to 4 players on one phone."
+      }
+    }
+  ]
+}
+</script>
+<script defer src="https://overwatch.kalmarium.com/h.js" data-app="knowdrop"></script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <img src="img/icon.png" width="72" height="72" alt="Knowdrop app icon: a smiling water drop with a green brain">
+      <h1>Knowdrop: the daily trivia quiz for Android</h1>
+    </div>
+    <p class="lead">A fresh Daily Drop of 10 fact-checked questions every day, picture quizzes, and battles with friends. No energy, no timers, and it works offline.</p>
+    <a class="play" href="https://play.google.com/store/apps/details?id=com.kalmarium.quizdrop&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhero" aria-label="Get it on Google Play" rel="noopener"><svg viewBox="0 0 180 54" width="180" height="54" role="img" aria-hidden="true" focusable="false"><rect x="0.5" y="0.5" width="179" height="53" rx="8" fill="#000" stroke="#a6a6a6"/><path d="M14 10 L14 44 L32 27 Z" fill="#00d26a"/><path d="M14 10 L32 27 L38 21 L20 11 Z" fill="#ffd400"/><path d="M14 44 L32 27 L38 33 L20 43 Z" fill="#ff3d57"/><path d="M38 21 L46 25.5 Q49 27 46 28.5 L38 33 L32 27 Z" fill="#3db8ff"/><text x="58" y="21" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="10" letter-spacing="1">GET IT ON</text><text x="58" y="41" fill="#fff" font-family="Arial,Helvetica,sans-serif" font-size="19" font-weight="600">Google Play</text></svg></a>
+    <p class="note">Free to play. Needs Android 8.0 or newer.</p>
+  </div>
+</header>
+<main class="wrap">
+  <h2>What is Knowdrop?</h2>
+  <p>Knowdrop is a trivia game for Android that gives you something new every day. Play the Daily Drop, work through quick rounds in 13 categories, race the clock in Speed Run, or see how far you get in Sudden Death. Then challenge friends on one phone or on their own phones. It is made by Kalmarium Services BV in the Netherlands.</p>
+  <div class="shots" tabindex="0" role="group" aria-label="Knowdrop screenshots">
+    <img src="img/daily-drop.webp" width="360" height="640" loading="lazy" alt="Knowdrop home screen showing Drop number 15, a Play now button, a sticker album and suggested topics">
+    <img src="img/picture-reveal.webp" width="360" height="640" loading="lazy" alt="Picture Reveal question: a pixelated landmark with four answer options and a countdown">
+    <img src="img/fun-fact.webp" width="360" height="640" loading="lazy" alt="A correct answer in Knowdrop with the score and a fun fact with a source link">
+    <img src="img/party.webp" width="360" height="640" loading="lazy" alt="Hosting an online game with a room code, a PIN and a QR code for friends to join">
+    <img src="img/categories.webp" width="360" height="640" loading="lazy" alt="The category list with General, History, Science, Geography, Movies and TV, Music and more">
+    <img src="img/stickers.webp" width="360" height="640" loading="lazy" alt="The sticker album with ancient wonders and wild animals to collect">
+  </div>
+
+  <h2>What you get</h2>
+  <div class="grid">
+    <div class="card"><h3>Daily Drop</h3><p>Every day at 00:00 UTC a new Drop arrives: 10 questions, from 3 easy to 3 hard. Everyone gets the same 10, so you can compare scores with friends. Keep your streak going, and use a free streak freeze if you miss a day.</p></div>
+    <div class="card"><h3>13 categories and themed packs</h3><p>More than 12,000 questions across General Knowledge, History, Science, Geography, Movies and TV, Music, Sports and more, plus themed packs such as Animals, Space, Olympics and Dinosaurs. New questions arrive by themselves, with no app update.</p></div>
+    <div class="card"><h3>Picture Reveal</h3><p>Guess flags, landmarks, animals and cars as a pixelated picture comes into focus. The sooner you answer, the more you score.</p></div>
+    <div class="card"><h3>Play with friends</h3><p>Pass and play with 2 to 4 players on one phone, host an online game that friends join with a code, QR code or PIN, send a challenge code over WhatsApp, and compare scores on daily and weekly leaderboards.</p></div>
+    <div class="card"><h3>Fact-checked with a fun fact</h3><p>Questions are written with AI help and then checked by a separate fact-check against reliable sources. Every answer shows a fun fact and a source link, and you can report any question you think is wrong.</p></div>
+    <div class="card"><h3>Streaks, stickers and trophies</h3><p>Earn sticker packs for finishing Daily Drops and winning, complete album pages to unlock avatar frames, and collect trophies. Stickers are earned, never sold.</p></div>
+  </div>
+
+  <h2>Questions and answers</h2>
+  <details><summary>Is Knowdrop free?</summary><p>Yes, Knowdrop is free to play. There are no lives, no energy and no waiting timers. Free players see a small banner ad on menu and result screens, never during a question or a match and not in the first 3 days. Optional purchases (Remove ads forever, or the Plus subscription) turn ads off.</p></details>
+  <details><summary>Can I play without an internet connection?</summary><p>Yes. The whole game works offline, so you can play on a plane or a train. Online features such as friends, leaderboards and live parties need a connection.</p></details>
+  <details><summary>Do I need an account?</summary><p>No account is needed to play. If you pick a nickname and an avatar, the app creates a simple online account for friends and leaderboards, without an email address or a password. You can delete it in the app at any time.</p></details>
+  <details><summary>How are the questions made and checked?</summary><p>Questions are written with the help of AI and then checked by a separate, independent fact-check against reliable sources. After each answer you see a fun fact and a source link. If you spot a mistake, tap Report on the question and we will look at it.</p></details>
+  <details><summary>Can I play with friends on their own phones?</summary><p>Yes. Host an online game and friends join from their own phones with a room code, a QR code, a PIN or an open game. You can also play pass and play with 2 to 4 players on one phone.</p></details>
+
+  <h2>Privacy and contact</h2>
+  <p>Read the <a href="privacy-policy.html">privacy policy</a> and the <a href="terms.html">terms of use</a>. Questions, ideas or a mistake to report? Email <a href="mailto:kalmariumservices@gmail.com">kalmariumservices@gmail.com</a>.</p>
+  <section class="more" aria-labelledby="more-h">
+  <h2 id="more-h">More from Kalmarium</h2>
+  <ul>
+    <li><a href="https://lingua.kalmarium.com/">Lingua Pairs</a> - memory game that teaches languages</li>
+    <li><a href="https://netcheck.kalmarium.com/">Ultimate Network Troubleshooter</a> - Wi-Fi and network analyzer</li>
+    <li><a href="https://prep4cert.kalmarium.com/">Prep 4 Cert</a> - Microsoft exam practice</li>
+    <li><a href="https://tankageddon.kalmarium.com/">Tankageddon</a> - offline tank shooter</li>
+    <li><a href="https://crackafold.kalmarium.com/">Crack A Fold</a> - foldable screen prank</li>
+    <li><a href="https://bilingua.kalmarium.com/">Bilingua Reader</a> - bilingual EPUB and PDF reader</li>
+  </ul>
+  <p><a href="https://kalmarium.com">kalmarium.com</a> - all apps by Kalmarium Services BV</p>
+</section>
+</main>
+<footer>
+  <div class="wrap">&copy; 2026 Kalmarium Services BV. Google Play and the Google Play logo are trademarks of Google LLC.</div>
+</footer>
+</body>
+</html>
