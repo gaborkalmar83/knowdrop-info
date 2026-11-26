@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Daily Trivia Quiz: 10 Fresh Questions Every Day, Knowdrop</title>
+<meta name="description" content="The Knowdrop Daily Drop is a daily trivia quiz: the same 10 questions for everyone at 00:00 UTC, 3 easy to 3 hard, with a streak and one weekly freeze.">
+<link rel="canonical" href="https://knowdrop.kalmarium.com/daily-trivia.html">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="theme-color" content="#14532d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Knowdrop">
+<meta property="og:title" content="Daily Trivia Quiz: 10 Fresh Questions Every Day, Knowdrop">
+<meta property="og:description" content="The Knowdrop Daily Drop is a daily trivia quiz: the same 10 questions for everyone at 00:00 UTC, 3 easy to 3 hard, with a streak and one weekly freeze.">
+<meta property="og:url" content="https://knowdrop.kalmarium.com/daily-trivia.html">
+<meta property="og:image" content="https://knowdrop.kalmarium.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Knowdrop, fresh trivia every day, with the water drop mascot">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Daily Trivia Quiz: 10 Fresh Questions Every Day, Knowdrop">
+<meta name="twitter:description" content="The Knowdrop Daily Drop is a daily trivia quiz: the same 10 questions for everyone at 00:00 UTC, 3 easy to 3 hard, with a streak and one weekly freeze.">
+<meta name="twitter:image" content="https://knowdrop.kalmarium.com/img/og.jpg">
+<style>
+  :root { --bg:#f6faf7; --text:#12201a; --muted:#4b5d53; --card:#ffffff; --line:#d7e5dc; --brand:#14532d; --brand-2:#15803d; --link:#1d4ed8; --accent:#facc15; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0b0f0d; --text:#e8efea; --muted:#a3b8ab; --card:#121a16; --line:#22322a; --brand:#22c55e; --brand-2:#16a34a; --link:#60a5fa; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 16px; }
+  header { background:linear-gradient(120deg,#14532d,#0e7490); color:#fff; padding:28px 0 32px; }
+  .brand { display:flex; align-items:center; gap:14px; }
+  .brand img { border-radius:20px; flex:none; }
+  header h1 { margin:0; font-size:1.55rem; line-height:1.2; }
+  header .lead { color:#d1fae5; margin:16px 0 20px; font-size:1.05rem; }
+  .play-badge { display:inline-block; line-height:0; border-radius:8px; }
+  .hero-cta { display:flex; flex-wrap:wrap; align-items:center; gap:12px 18px; }
+  .btn { display:inline-block; background:#fff; color:#14532d; font-weight:700; text-decoration:none; padding:14px 22px; border-radius:10px; line-height:1.2; }
+  .btn:hover { background:#d1fae5; }
+  .cta-bottom { margin:24px 0 0; }
+  .guides ul { padding-left:20px; }
+  .play-badge:focus-visible, .btn:focus-visible, a:focus-visible, .shots:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+  .note { font-size:.9rem; margin:10px 0 0; color:#d1fae5; }
+  h2 { color:var(--brand); font-size:1.3rem; margin:36px 0 10px; padding-bottom:4px; border-bottom:3px solid var(--accent); display:inline-block; }
+  h3 { font-size:1.05rem; margin:0 0 4px; }
+  a { color:var(--link); }
+  .shots { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 16px 12px; margin:12px -16px 0; }
+  .shots img { scroll-snap-align:start; flex:none; width:200px; height:auto; border-radius:14px; border:1px solid var(--line); }
+  .grid { display:grid; gap:12px; grid-template-columns:1fr; }
+  .card { background:var(--card); border:1px solid var(--line); border-left:5px solid var(--brand-2); border-radius:12px; padding:12px 16px; }
+  .card p { margin:0; }
+  details { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 16px; margin:10px 0; }
+  summary { cursor:pointer; font-weight:600; }
+  details p { margin:8px 0 2px; }
+  .more ul { padding-left:20px; }
+  footer { border-top:1px solid var(--line); margin-top:36px; padding:20px 0 36px; color:var(--muted); font-size:.92rem; }
+  @media (min-width:640px) { .grid { grid-template-columns:1fr 1fr; } header h1 { font-size:2rem; } .shots img { width:220px; } }
+  .crumb { color:#d1fae5; font-size:.95rem; font-weight:600; text-decoration:none; display:inline-block; margin-bottom:2px; }
+  .crumb:hover { text-decoration:underline; }
+  .hero-cta { display:flex; flex-wrap:wrap; align-items:center; gap:12px 18px; }
+  .play-badge { display:inline-block; line-height:0; border-radius:8px; }
+  .play-badge:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+  .pair { display:grid; grid-template-columns:repeat(2,minmax(0,220px)); gap:14px; margin:18px 0 6px; }
+  .pair figure { margin:0; }
+  .pair img { width:100%; height:auto; border-radius:14px; border:1px solid var(--line); display:block; }
+  .pair figcaption { font-size:.9rem; color:var(--muted); margin-top:6px; }
+  .cta-bottom { margin:24px 0 0; }
+  .related ul { padding-left:20px; }
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  {"@type": "Question", "name": "When does the new Daily Drop arrive?", "acceptedAnswer": {"@type": "Answer", "text": "Every day at 00:00 UTC a new Daily Drop arrives: 10 questions, from 3 easy to 3 hard. Everyone gets the same 10, so you can compare scores with friends."}},
+  {"@type": "Question", "name": "What happens to my streak if I miss a day?", "acceptedAnswer": {"@type": "Answer", "text": "You keep a streak by playing, and one free streak freeze per week covers a missed day."}},
+  {"@type": "Question", "name": "Can I share my Daily Drop result?", "acceptedAnswer": {"@type": "Answer", "text": "Yes. You can share your result as an emoji score card, without spoilers."}}
+]}
+</script>
+<script defer src="https://overwatch.kalmarium.com/h.js" data-app="knowdrop"></script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <img src="img/icon.png" width="72" height="72" alt="Knowdrop app icon: a smiling water drop with a green brain">
+      <div>
+        <a class="crumb" href="./">Knowdrop</a>
+        <h1>Daily trivia quiz: the Daily Drop</h1>
+      </div>
+    </div>
+    <p class="lead">The Daily Drop is the daily trivia quiz at the heart of Knowdrop. Once a day, everyone gets the same 10 questions, so your score means something when you compare it with friends.</p>
+    <div class="hero-cta"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.kalmarium.quizdrop&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Ddaily-trivia" aria-label="Get it on Google Play: Knowdrop" rel="noopener"><img src="img/google-play-badge.png" alt="Get it on Google Play" width="646" height="250" style="width:200px;height:auto"></a></div>
+  </div>
+</header>
+<main class="wrap">
+  <h2>What arrives every day</h2>
+  <p>Every day at 00:00 UTC a new Daily Drop arrives. It holds 10 trivia questions, from 3 easy to 3 hard, so the quiz warms you up and then asks something harder. In the Netherlands, 00:00 UTC is 01:00 in winter and 02:00 in summer. Wherever you live, the new Drop appears at that same moment for every player.</p>
+  <p>Because everyone gets the same 10, a daily score is easy to compare. You can ask a friend how they did on today's Drop and know that you both answered exactly the same questions. If you close the app by accident, you continue at the same question.</p>
+
+  <h2>Streaks and the weekly freeze</h2>
+  <p>Play the Daily Drop on consecutive days to build a streak. Everyone misses a day sometimes, so you get one free streak freeze every week. It covers a missed day and keeps your streak alive.</p>
+  <p>Finishing Daily Drops also earns sticker packs for the sticker album. Complete a page of the album to unlock an avatar frame. Stickers are earned by playing, never sold.</p>
+
+  <h2>Share your result without spoilers</h2>
+  <p>When you finish, you can share your result as an emoji score card. It shows how you did without giving away any of the questions, so a friend who has not played yet is not spoiled. The statistics screen keeps your recent Daily Drops, your best scores and your accuracy per category.</p>
+
+  <h2>Questions you can check</h2>
+  <p>Every question in the Daily Drop is written with the help of AI and then checked by a separate, independent fact-check against reliable sources. After each answer you see a fun fact and a source link, and if you spot a mistake you can tap Report. The page on <a href="how-we-fact-check.html">how we fact-check</a> explains the steps.</p>
+
+  <h2>Reminders only if you want them</h2>
+  <p>A daily reminder is optional. If you switch it on, you get at most 2 a day and never at night. The Daily Drop is free to play, works offline, and has no lives, no energy and no waiting timers. If you would rather start with a picture round, try the <a href="flags-quiz.html">flags quiz</a>.</p>
+  <div class="pair"><figure><img src="img/daily-drop.webp" width="360" height="640" loading="lazy" alt="Knowdrop home screen showing Drop number 15, a Play now button, a sticker album and suggested topics"><figcaption>The home screen with today's Drop</figcaption></figure><figure><img src="img/stickers.webp" width="360" height="640" loading="lazy" alt="The sticker album with ancient wonders and wild animals to collect"><figcaption>The sticker album</figcaption></figure></div>
+
+  <h2>Questions and answers</h2>
+  <details><summary>When does the new Daily Drop arrive?</summary><p>Every day at 00:00 UTC a new Daily Drop arrives: 10 questions, from 3 easy to 3 hard. Everyone gets the same 10, so you can compare scores with friends.</p></details>
+  <details><summary>What happens to my streak if I miss a day?</summary><p>You keep a streak by playing, and one free streak freeze per week covers a missed day.</p></details>
+  <details><summary>Can I share my Daily Drop result?</summary><p>Yes. You can share your result as an emoji score card, without spoilers.</p></details>
+
+  <p class="cta-bottom"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.kalmarium.quizdrop&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Ddaily-trivia" aria-label="Get it on Google Play: Knowdrop" rel="noopener"><img src="img/google-play-badge.png" alt="Get it on Google Play" width="646" height="250" style="width:200px;height:auto" loading="lazy"></a></p>
+
+  <section class="related" aria-labelledby="rel-h">
+  <h2 id="rel-h">More about Knowdrop</h2>
+  <ul>
+    <li><a href="./">Knowdrop home page</a></li>
+    <li><a href="flags-quiz.html">Flags quiz: guess the flag as it comes into focus</a></li>
+    <li><a href="how-we-fact-check.html">How every trivia question is fact-checked</a></li>
+  </ul>
+  </section>
+</main>
+<footer>
+  <div class="wrap">&copy; 2026 Kalmarium Services B.V., Almere, the Netherlands. <a href="https://apps.kalmarium.com/?utm_source=knowdrop&amp;utm_medium=footer">All Kalmarium apps</a> &middot; <a href="privacy-policy.html">Privacy policy</a> &middot; <a href="terms.html">Terms of use</a><br>Google Play and the Google Play logo are trademarks of Google LLC.</div>
+</footer>
+</body>
+</html>

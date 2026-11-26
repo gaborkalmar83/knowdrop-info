@@ -1,0 +1,135 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>How Knowdrop Trivia Questions Are Written and Fact-Checked</title>
+<meta name="description" content="Every Knowdrop trivia question is drafted with AI help, then checked by a separate fact-check against reliable sources, and shows a source link in the app.">
+<link rel="canonical" href="https://knowdrop.kalmarium.com/how-we-fact-check.html">
+<link rel="icon" type="image/png" href="img/icon.png">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta name="theme-color" content="#14532d">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Knowdrop">
+<meta property="og:title" content="How Knowdrop Trivia Questions Are Written and Fact-Checked">
+<meta property="og:description" content="Every Knowdrop trivia question is drafted with AI help, then checked by a separate fact-check against reliable sources, and shows a source link in the app.">
+<meta property="og:url" content="https://knowdrop.kalmarium.com/how-we-fact-check.html">
+<meta property="og:image" content="https://knowdrop.kalmarium.com/img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Knowdrop, fresh trivia every day, with the water drop mascot">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="How Knowdrop Trivia Questions Are Written and Fact-Checked">
+<meta name="twitter:description" content="Every Knowdrop trivia question is drafted with AI help, then checked by a separate fact-check against reliable sources, and shows a source link in the app.">
+<meta name="twitter:image" content="https://knowdrop.kalmarium.com/img/og.jpg">
+<style>
+  :root { --bg:#f6faf7; --text:#12201a; --muted:#4b5d53; --card:#ffffff; --line:#d7e5dc; --brand:#14532d; --brand-2:#15803d; --link:#1d4ed8; --accent:#facc15; }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg:#0b0f0d; --text:#e8efea; --muted:#a3b8ab; --card:#121a16; --line:#22322a; --brand:#22c55e; --brand-2:#16a34a; --link:#60a5fa; }
+  }
+  * { box-sizing: border-box; }
+  body { margin:0; background:var(--bg); color:var(--text); font:16px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
+  .wrap { max-width:760px; margin:0 auto; padding:0 16px; }
+  header { background:linear-gradient(120deg,#14532d,#0e7490); color:#fff; padding:28px 0 32px; }
+  .brand { display:flex; align-items:center; gap:14px; }
+  .brand img { border-radius:20px; flex:none; }
+  header h1 { margin:0; font-size:1.55rem; line-height:1.2; }
+  header .lead { color:#d1fae5; margin:16px 0 20px; font-size:1.05rem; }
+  .play-badge { display:inline-block; line-height:0; border-radius:8px; }
+  .hero-cta { display:flex; flex-wrap:wrap; align-items:center; gap:12px 18px; }
+  .btn { display:inline-block; background:#fff; color:#14532d; font-weight:700; text-decoration:none; padding:14px 22px; border-radius:10px; line-height:1.2; }
+  .btn:hover { background:#d1fae5; }
+  .cta-bottom { margin:24px 0 0; }
+  .guides ul { padding-left:20px; }
+  .play-badge:focus-visible, .btn:focus-visible, a:focus-visible, .shots:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+  .note { font-size:.9rem; margin:10px 0 0; color:#d1fae5; }
+  h2 { color:var(--brand); font-size:1.3rem; margin:36px 0 10px; padding-bottom:4px; border-bottom:3px solid var(--accent); display:inline-block; }
+  h3 { font-size:1.05rem; margin:0 0 4px; }
+  a { color:var(--link); }
+  .shots { display:flex; gap:12px; overflow-x:auto; scroll-snap-type:x mandatory; padding:4px 16px 12px; margin:12px -16px 0; }
+  .shots img { scroll-snap-align:start; flex:none; width:200px; height:auto; border-radius:14px; border:1px solid var(--line); }
+  .grid { display:grid; gap:12px; grid-template-columns:1fr; }
+  .card { background:var(--card); border:1px solid var(--line); border-left:5px solid var(--brand-2); border-radius:12px; padding:12px 16px; }
+  .card p { margin:0; }
+  details { background:var(--card); border:1px solid var(--line); border-radius:12px; padding:10px 16px; margin:10px 0; }
+  summary { cursor:pointer; font-weight:600; }
+  details p { margin:8px 0 2px; }
+  .more ul { padding-left:20px; }
+  footer { border-top:1px solid var(--line); margin-top:36px; padding:20px 0 36px; color:var(--muted); font-size:.92rem; }
+  @media (min-width:640px) { .grid { grid-template-columns:1fr 1fr; } header h1 { font-size:2rem; } .shots img { width:220px; } }
+  .crumb { color:#d1fae5; font-size:.95rem; font-weight:600; text-decoration:none; display:inline-block; margin-bottom:2px; }
+  .crumb:hover { text-decoration:underline; }
+  .hero-cta { display:flex; flex-wrap:wrap; align-items:center; gap:12px 18px; }
+  .play-badge { display:inline-block; line-height:0; border-radius:8px; }
+  .play-badge:focus-visible { outline:3px solid var(--accent); outline-offset:2px; }
+  .pair { display:grid; grid-template-columns:repeat(2,minmax(0,220px)); gap:14px; margin:18px 0 6px; }
+  .pair figure { margin:0; }
+  .pair img { width:100%; height:auto; border-radius:14px; border:1px solid var(--line); display:block; }
+  .pair figcaption { font-size:.9rem; color:var(--muted); margin-top:6px; }
+  .cta-bottom { margin:24px 0 0; }
+  .related ul { padding-left:20px; }
+</style>
+<script type="application/ld+json">
+{"@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [
+  {"@type": "Question", "name": "Who writes the Knowdrop questions?", "acceptedAnswer": {"@type": "Answer", "text": "Questions are written with the help of AI and then checked by a separate, independent fact-check against reliable sources."}},
+  {"@type": "Question", "name": "How can I see where an answer comes from?", "acceptedAnswer": {"@type": "Answer", "text": "After each answer you see a fun fact and a source link."}},
+  {"@type": "Question", "name": "What should I do if I find a wrong answer?", "acceptedAnswer": {"@type": "Answer", "text": "Tap Report on the question and we will look at it. You can also email kalmariumservices@gmail.com."}}
+]}
+</script>
+<script defer src="https://overwatch.kalmarium.com/h.js" data-app="knowdrop"></script>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="brand">
+      <img src="img/icon.png" width="72" height="72" alt="Knowdrop app icon: a smiling water drop with a green brain">
+      <div>
+        <a class="crumb" href="./">Knowdrop</a>
+        <h1>How every trivia question is written and fact-checked</h1>
+      </div>
+    </div>
+    <p class="lead">A trivia game is only fun if the answers are right. This page explains in plain words how Knowdrop questions are made, what checks them, and what you can do when you think one is wrong.</p>
+    <div class="hero-cta"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.kalmarium.quizdrop&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhow-we-fact-check" aria-label="Get it on Google Play: Knowdrop" rel="noopener"><img src="img/google-play-badge.png" alt="Get it on Google Play" width="646" height="250" style="width:200px;height:auto"></a></div>
+  </div>
+</header>
+<main class="wrap">
+  <h2>AI helps to write the questions</h2>
+  <p>We say it up front: Knowdrop questions are written with the help of AI. The question bank holds more than 12,000 questions in 13 categories, plus 12 themed packs. That is far more than one person could write by hand, and AI makes the first draft possible. A draft is never the end of the process.</p>
+
+  <h2>A separate fact-check</h2>
+  <p>After a question is drafted, a separate, independent fact-check goes over it against reliable sources. The check is a separate step from the writing. A question that does not pass is fixed or replaced.</p>
+
+  <h2>A fun fact and a source link on every answer</h2>
+  <p>You do not have to take our word for it. After each answer, Knowdrop shows a fun fact and a source link, so you can see where the answer comes from and read more. A fun fact is a small reward for a right answer and a gentle explanation after a wrong one.</p>
+
+  <h2>Mistakes still happen, so there is a Report button</h2>
+  <p>We do not claim that a question is never wrong. Facts change, sources disagree, and a checked question can still contain an error. That is why every question has a Report button. Tap Report on the question and we will look at it. You can also email <a href="mailto:kalmariumservices@gmail.com">kalmariumservices@gmail.com</a>.</p>
+
+  <h2>Suggest a topic or a question</h2>
+  <p>Players can suggest a topic or a full question from inside the app. Good ideas are reviewed and fact-checked before they can become part of the game. The app also offers a "Suggested for you" list, which picks topics based on what you play.</p>
+
+  <h2>New questions without an update</h2>
+  <p>New questions and pictures arrive by themselves, so you do not need to update the app to get fresh trivia. The <a href="daily-trivia.html">Daily Drop</a> uses the same question bank, and the <a href="flags-quiz.html">flags quiz</a> uses pictures from it.</p>
+  <div class="pair"><figure><img src="img/fun-fact.webp" width="360" height="640" loading="lazy" alt="A correct answer in Knowdrop with the score and a fun fact with a source link"><figcaption>A fun fact with a source link</figcaption></figure><figure><img src="img/categories.webp" width="360" height="640" loading="lazy" alt="The category list with General, History, Science, Geography, Movies and TV, Music and more"><figcaption>13 categories to choose from</figcaption></figure></div>
+
+  <h2>Questions and answers</h2>
+  <details><summary>Who writes the Knowdrop questions?</summary><p>Questions are written with the help of AI and then checked by a separate, independent fact-check against reliable sources.</p></details>
+  <details><summary>How can I see where an answer comes from?</summary><p>After each answer you see a fun fact and a source link.</p></details>
+  <details><summary>What should I do if I find a wrong answer?</summary><p>Tap Report on the question and we will look at it. You can also email kalmariumservices@gmail.com.</p></details>
+
+  <p class="cta-bottom"><a class="play-badge" href="https://play.google.com/store/apps/details?id=com.kalmarium.quizdrop&amp;referrer=utm_source%3Dwebsite%26utm_medium%3Dhow-we-fact-check" aria-label="Get it on Google Play: Knowdrop" rel="noopener"><img src="img/google-play-badge.png" alt="Get it on Google Play" width="646" height="250" style="width:200px;height:auto" loading="lazy"></a></p>
+
+  <section class="related" aria-labelledby="rel-h">
+  <h2 id="rel-h">More about Knowdrop</h2>
+  <ul>
+    <li><a href="./">Knowdrop home page</a></li>
+    <li><a href="daily-trivia.html">Daily trivia quiz: the Daily Drop</a></li>
+    <li><a href="flags-quiz.html">Flags quiz: guess the flag as it comes into focus</a></li>
+  </ul>
+  </section>
+</main>
+<footer>
+  <div class="wrap">&copy; 2026 Kalmarium Services B.V., Almere, the Netherlands. <a href="https://apps.kalmarium.com/?utm_source=knowdrop&amp;utm_medium=footer">All Kalmarium apps</a> &middot; <a href="privacy-policy.html">Privacy policy</a> &middot; <a href="terms.html">Terms of use</a><br>Google Play and the Google Play logo are trademarks of Google LLC.</div>
+</footer>
+</body>
+</html>
